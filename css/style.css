@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "Birthday";
+    src: url("../fonts/ARCADEPI.TTF");
+}
+
+@font-face {
+    font-family: "Freaky";
+    src: url("../fonts/FreakyFont.otf");
+}
+
+.birthday-title {
+    font-family: "Freaky", cursive;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 3px 3px 0 #7a0000;
+}
+
+.subtitle {
+    font-family: "Freaky", cursive;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 3px 3px 0 #7a0000;
+}
+
+.landing-page{
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background-image: url("../images/back.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.letter-page {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background-image: url("../images/letterback.jpeg");
+    
+}
+
+.photo-page {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../images/us.jpeg");
+    background-size: cover;
+    background-position: 80%;
+}
+
+.hearts {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.cake {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.open-text {
+    margin-top: 1px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: "Freaky", cursive;
+    color: #fff;
+    text-shadow: 3px 3px 0 #7a0000;
+}
+
+.envelope {
+    width: 170px;
+    cursor: pointer;
+    animation:
+        float 2.5s ease-in-out infinite 0s;
+}
+
+.thank-tittle {
+    font-family: "Freaky", cursive;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 3px 3px 0 #7a0000;
+    margin-top: 100px;
+}
+
+.letter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.scroll {
+    width: 600px;
+    display: block;
+}
+
+.letter-text{
+    position: absolute;
+    font-size: 15px;
+
+    top: 22%;
+    left: 30%;
+
+    width: 40%;
+
+    color: #6b2c3e;
+    font-family: "Birthday", cursive;
+
+    text-align: left;
+}
+
+.heart-button {
+    width: 100px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    animation: heartbeat 1.8s infinite;
+}
+
+.opening-page{
+    margin:0;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background-image:url("../images/openback.jpeg");
+    background-size:cover;
+    background-position:center;
+
+    overflow:hidden;
+}
+
+.envelope-container{
+
+    position:relative;
+
+    width:320px;
+
+    height:250px;
+
+    animation:
+        popIn .6s ease-out,
+        float 2.5s ease-in-out infinite .6s;
+
+}
+
+.back,
+.letter,
+.front-open,
+.front-closed{
+
+    position:absolute;
+
+    width:100%;
+
+    left:0;
+
+    top:0;
+
+}
+
+.front-open{
+    display: none;
+}
+
+.letter{
+    display: none;
+}
+
+.letter.show{
+
+    animation: pullLetter 1.3s ease forwards;
+
+}
+
+.letter.clickable{
+
+    cursor:pointer;
+
+}
+
+@keyframes pullLetter{
+
+    from{
+        transform:translateY(0px);
+    }
+
+    to{
+        transform:translateY(-200px);
+    }
+}
+
+.back {
+    display: none;
+}
+
+@keyframes popIn{
+
+    0%{
+        transform:scale(0);
+        opacity:0;
+    }
+
+    70%{
+        transform:scale(1.08);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.12);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.08);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+}

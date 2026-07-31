@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opening the gift!!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="opening-page">
+
+    <div class="envelope-container">
+
+        <img src="images/envelope/letter-back.png"
+            id="back"
+            class="back">
+
+        <img src="images/envelope/scroll.png"
+            id="letter"
+            class="letter">
+
+        <img src="images/envelope/front-open.png"
+            id ="frontOpen" 
+            class="front-open"> 
+        
+        <img src="images/envelope/front-closed.png" 
+            id="frontClosed"
+            class="front-closed"
+            onclick="openEnvelope()">
+        
+    </div>
+
+    <script>
+
+    function openEnvelope(){
+
+        const back = document.getElementById("back");
+        const letter = document.getElementById("letter");
+        const frontOpen = document.getElementById("frontOpen");
+        const frontClosed = document.getElementById("frontClosed");
+        const paperSound = document.getElementById("paperSound");
+
+        frontClosed.style.display = "none";
+        frontOpen.style.display = "block";
+        back.style.display = "block";
+        letter.style.display = "block";
+        
+        setTimeout(() => {
+
+            paperSound.currentTime = 0;
+            paperSound.play();
+            
+            letter.classList.add("show");
+
+        }, 2);
+
+        letter.classList.add("clickable");
+        letter.onclick = function(){
+
+        location.href = "wishes.html";
+
+    }
+
+    }
+
+    </script>
+
+    <audio id="paperSound">
+        <source src="sound/paper.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>
