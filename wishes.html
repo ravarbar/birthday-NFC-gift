@@ -66,5 +66,17 @@
         <source src="sound/sleepyhead.mp3" type="audio/mpeg">
     </audio>
 
+    <script>
+
+        const music = document.getElementById("music");
+
+        document.body.addEventListener("click", () => {
+
+            music.play();
+
+        }, { once: true });
+
+    </script>
+
 </body>
 </html>
